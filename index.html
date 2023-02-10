@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BusyBody</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+
+<body>
+  <div class="main">
+    <section class="mainUI">
+      <nav>
+        <img class="logo" src="./images/mainLogo.png" alt="">
+        <h1>BusyBody</h1>
+        <button class="hamburger" type="button" onclick="show_hide()">
+          <i  class="ri-menu-3-line"></i>
+        </button>
+      </nav>
+      <div class="allInfo">
+        <div class="memberInfo">
+          <div class="memberHead">
+            <h3>Members</h3>
+            <h4 class="users-count">0</h4>
+          </div>
+          <div class="memberList">
+          </div>
+        </div>
+        <div class="chatInfo">
+          <div class="chats">
+          </div>
+          <div class="messagesInput">
+            <textarea id="user-message" rows="1" type="text" placeholder="Enter your message..."></textarea>
+            <button type="button" id="send">Send</button>
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+  </div>
+
+  <script>
+    var uWindow = document.querySelector('.memberInfo');
+    function show_hide(){
+      if(uWindow.style.display == "none"){
+        uWindow.style.display = "block";
+      }else{
+        uWindow.style.display = "none";
+      }
+    }
+
+  </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- <script src="/javascripts/client.js"></script> -->
+</body>
+
+</html>
